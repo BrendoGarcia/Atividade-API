@@ -14,7 +14,8 @@ https://atividade-api-production.up.railway.app/colaborador = Metodo GET. Recebi
     "datanascimento": "11/07/1999",
     "status": "ATIVO"
   }
-]```
+]
+```
 
 https://atividade-api-production.up.railway.app/registrar = Metodo Post. Cria um colaborador o post deve ser enviado em formato Json. contendo os seguintes dados:
 
@@ -23,4 +24,5 @@ https://atividade-api-production.up.railway.app/registrar = Metodo Post. Cria um
     "senhaacesso": "123",
     "datanascimento": "11/07/1999",
     "status": "ATIVO"
-  }```
+  }
+```
