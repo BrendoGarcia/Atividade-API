@@ -11,22 +11,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ColaboradorController {
+public class ProfessorController {
 	
 	@Autowired
-	private ColaboradorRepository CR;
+	private ProfessorRepository CR;
 	
 	@GetMapping("/colaborador")
 	@CrossOrigin
-	public Iterable<Colaborador> Colaborador() {
+	public Iterable<Professor> Colaborador() {
 		return CR.findAll();
 	}
 	
 	@PostMapping("/registrar")
 	@CrossOrigin
-	public ResponseEntity<String> userCadastro(@RequestBody Colaborador colaborador) {
+	public ResponseEntity<String> userCadastro(@RequestBody Professor professor) {
 	        // Codificar a senha antes de salvar
-	        CR.save(colaborador);
+	        CR.save(professor);
 	        return ResponseEntity.status(HttpStatus.CREATED).body("Usuário cadastrado com sucesso");
 	}
 
