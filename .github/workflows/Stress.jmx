@@ -1,6 +1,15 @@
-- name: Run JMeter stress test
+- name: Rodar teste JMeter
   run: |
-    sudo apt-get install -y openjdk-11-jre
+    # Instalar Java 11 (se não estiver instalado)
+    sudo apt-get update
+    sudo apt-get install -y openjdk-11-jre-headless
+
+    # Baixar e descompactar JMeter
     wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.5.tgz
     tar -xzf apache-jmeter-5.5.tgz
-    ./apache-jmeter-5.5/bin/jmeter -n -t testes/meu_teste.jmx -l resultado.jtl -e -o relatorio
+
+    # Rodar o teste no modo não GUI (-n), passando o arquivo .jmx
+    ./apache-jmeter-5.5/bin/jmeter -n -t src/test/java/com/Atividade/meutestes.jmx -l resultado.jtl -e -o relatorio
+
+    # Mostrar os arquivos gerados (opcional)
+    ls -l relatorio
