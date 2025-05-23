@@ -19,5 +19,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Rodar testes com Maven
-      run: mvn test
+    - name: Rodar testes com Maven (com debug)
+      run: mvn clean test -e -X
+
+    - name: Listar relatórios de testes
+      run: ls -l target/surefire-reports || echo "Pasta não encontrada"
+
+    - name: Mostrar relatórios de testes (se existirem)
+      run: cat target/surefire-reports/*.txt || echo "Nenhum relatório para mostrar"
