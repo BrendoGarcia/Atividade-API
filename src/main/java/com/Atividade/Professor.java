@@ -5,13 +5,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "colaborador")
-public class Colaborador {
+@Table(name = "Professor")
+public class Professor {
 	
-	private String nomecolaborador;
+	private String nomeprofessor;
 	
 	@Id
-	private String cpfcolaborador;
+	private String cpfprofessor;
 	
 	
 	private String senhaacesso;
@@ -21,33 +21,60 @@ public class Colaborador {
 	
 	
 	private String status;
-	
-	
-	
-	public String getNomecolaborador() {
-		return nomecolaborador;
+
+
+	public String getNomeprofessor() {
+		return nomeprofessor;
 	}
-	public void setNomecolaborador(String nomecolaborador) {
-		this.nomecolaborador = nomecolaborador;
+
+
+	public void setNomeprofessor(String nomeprofessor) {
+		this.nomeprofessor = nomeprofessor;
 	}
+
+
+	public String getCpfprofessor() {
+		return cpfprofessor;
+	}
+
+
+	public void setCpfprofessor(String cpfprofessor) {
+		this.cpfprofessor = cpfprofessor;
+	}
+
+
 	public String getSenhaacesso() {
 		return senhaacesso;
 	}
+
+
 	public void setSenhaacesso(String senhaacesso) {
 		this.senhaacesso = senhaacesso;
 	}
+
+
 	public String getDatanascimento() {
 		return datanascimento;
 	}
+
+
 	public void setDatanascimento(String datanascimento) {
 		this.datanascimento = datanascimento;
 	}
+
+
 	public String getStatus() {
 		return status;
 	}
+
+
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	
+	
+	
+	
 	
 
 }
