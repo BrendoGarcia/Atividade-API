@@ -1,0 +1,6 @@
+- name: Run JMeter stress test
+  run: |
+    sudo apt-get install -y openjdk-11-jre
+    wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.5.tgz
+    tar -xzf apache-jmeter-5.5.tgz
+    ./apache-jmeter-5.5/bin/jmeter -n -t testes/meu_teste.jmx -l resultado.jtl -e -o relatorio
