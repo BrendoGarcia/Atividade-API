@@ -31,7 +31,9 @@ public class ProfessorControllerTest {
     void deveCadastrarProfessorComSucesso() throws Exception {
         Professor novoProfessor = new Professor();
         novoProfessor.setNomeprofessor("João da Silva");
+        novoProfessor.setDatanascimento("17/07/1999");
         novoProfessor.setCpfprofessor("12345678996");
+        novoProfessor.setStatus("Ativo");
         novoProfessor.setSenhaacesso("123456");
 
         mockMvc.perform(post("/registrar")
