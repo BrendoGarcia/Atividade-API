@@ -15,9 +15,9 @@ public class ConfigDataBase {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://turntable.proxy.rlwy.net:52485/railway"); // turntable.proxy.rlwy.net:52485/railway
+        dataSource.setUrl("jdbc:postgresql://postgres:UxUiHqzEvkQKRGSOBKqkykQqKlNWxjwN@switchback.proxy.rlwy.net:54131/railway"); // turntable.proxy.rlwy.net:52485/railway
         dataSource.setUsername("postgres");
-        dataSource.setPassword("rKTDXCmICwCTxJrFmvwkSVjTJytdeWho");
+        dataSource.setPassword("UxUiHqzEvkQKRGSOBKqkykQqKlNWxjwN");
         return dataSource;
     }
         
