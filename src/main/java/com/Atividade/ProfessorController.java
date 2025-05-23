@@ -16,7 +16,7 @@ public class ProfessorController {
 	@Autowired
 	private ProfessorRepository CR;
 	
-	@GetMapping("/colaborador")
+	@GetMapping("/professor")
 	@CrossOrigin
 	public Iterable<Professor> Colaborador() {
 		return CR.findAll();
