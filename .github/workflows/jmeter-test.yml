@@ -29,3 +29,13 @@ jobs:
     - name: Executar teste JMeter
       run: |
         ./jmeter/bin/jmeter -n -t src/test/java/com/Atividade/meutestes.jmx -l resultados.jtl
+
+    - name: Gerar relatório HTML
+      run: |
+        apache-jmeter-5.6.3/bin/jmeter -g resultado.jtl -o relatorio-html
+
+    - name: Publicar relatório como artefato
+      uses: actions/upload-artifact@v3
+      with:
+        name: relatorio-jmeter
+        path: relatorio-html
