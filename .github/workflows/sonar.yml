@@ -1,0 +1,3 @@
+- name: Executar análise SonarQube
+  run: mvn sonar:sonar \
+    -Dsonar.login=${{ secrets.SONAR_TOKEN }}
