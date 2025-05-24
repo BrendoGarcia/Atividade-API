@@ -32,10 +32,10 @@ jobs:
 
     - name: Gerar relatório HTML
       run: |
-        apache-jmeter-5.6.3/bin/jmeter -g resultado.jtl -o relatorio-html
+        ./jmeter/bin/jmeter -g resultados.jtl -o relatorio-html
 
     - name: Publicar relatório como artefato
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: relatorio-jmeter
         path: relatorio-html
