@@ -1,4 +1,23 @@
-- name: Executar análise SonarQube
-  run: |
-    mvn sonar:sonar \
-      -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+name: Análise SonarQube
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sonar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Configurar Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Executar análise SonarQube
+        run: |
+          mvn sonar:sonar -Dsonar.login=${{ secrets.SONAR_TOKEN }}
